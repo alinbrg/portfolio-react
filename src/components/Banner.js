@@ -5,8 +5,9 @@ import headerImg from "../assets/img/header-img.svg";
 import { useState, useEffect } from "react";
 
 export const Banner = () => {
+	const [loopNum, setLoopNum] = useState(0);
 	const [isDeleting, setIsDeleting] = useState(false);
-	const toRotate = ["Front-End Developer"];
+	const toRotate = ["Web Developer", "Front-End Developer", "JS Developer"];
 	const [text, setText] = useState("");
 	const [delta, setDelta] = useState(300 - Math.random() * 100);
 	const period = 2000;
@@ -21,7 +22,9 @@ export const Banner = () => {
 	}, [text]);
 
 	const tick = () => {
-		let fullText = toRotate[0];
+		let i = loopNum % toRotate.length;
+		// console.log(i);
+		let fullText = toRotate[i];
 		// console.log(fullText);
 		let updateText = isDeleting
 			? fullText.substring(0, text.length - 1)
@@ -38,6 +41,7 @@ export const Banner = () => {
 			setDelta(period);
 		} else if (isDeleting && updateText === "") {
 			setIsDeleting(false);
+			setLoopNum(loopNum + 1);
 			setDelta(500);
 		}
 	};
