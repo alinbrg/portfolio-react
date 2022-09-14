@@ -4,7 +4,7 @@ import headerImg from "../assets/img/astr2.png";
 
 import { useState, useEffect } from "react";
 
-export const Banner = () => {
+export default function Banner() {
 	const [loopNum, setLoopNum] = useState(0);
 	const [isDeleting, setIsDeleting] = useState(false);
 	const toRotate = ["Web Developer", "Front-End Developer"];
@@ -71,4 +71,4 @@ export const Banner = () => {
 			</Container>
 		</section>
 	);
-};
+}
