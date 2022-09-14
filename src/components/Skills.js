@@ -29,14 +29,13 @@ export default function Skills() {
 	};
 
 	return (
-		<section className="skills" id="skills">
+		<section className="skill" id="skill">
 			<Container>
 				<Row>
 					<Col>
 						<div className="skill-bx">
 							<h2>Skills</h2>
 							<p>
-								{" "}
 								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
 								delectus! Nisi, eveniet a non magnam cum, libero cumque,
 							</p>

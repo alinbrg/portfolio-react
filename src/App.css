@@ -325,6 +325,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Skills Css ************/
+
 .skill {
 	padding: 0 0 50px 0;
 	position: relative;
@@ -335,6 +336,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	text-align: center;
 	padding: 60px 50px;
 	margin-top: -60px;
+	margin-bottom: 30px;
 }
 .skill h2 {
 	font-size: 45px;
@@ -395,6 +397,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-radius: 50px;
 	background-color: rgb(255 255 255 / 10%);
 	overflow: hidden;
+	margin-bottom: 30px;
 }
 .project .nav.nav-pills .nav-item {
 	width: 33.33333%;
@@ -459,6 +462,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx:hover::before {
 	height: 100%;
+	left: 0;
 }
 .proj-txtx {
 	position: absolute;
