@@ -3,8 +3,11 @@ import projImg1 from "../assets/img/project-img1.png";
 import ProjectCard from "./ProjectCard";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import { useTranslation } from "react-i18next";
 
 export default function Projects() {
+	const { t } = useTranslation();
+
 	const projects = [
 		{
 			title: "single landing page",
@@ -43,11 +46,8 @@ export default function Projects() {
 			<Container>
 				<Row>
 					<Col>
-						<h2>projects</h2>
-						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
-							delectus! Nisi, eveniet a non magnam cum, libero cumque,
-						</p>
+						<h2>{t("projects")}</h2>
+						<p>{t("projects_desc")}</p>
 
 						<Tab.Container id="projects-tabs" defaultActiveKey="first">
 							<Nav variant="pills">

@@ -4,6 +4,7 @@ import Banner from "./components/Banner";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import "./lang/i18n";
 
 function App() {
 	return (

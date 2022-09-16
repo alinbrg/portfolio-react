@@ -112,7 +112,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 	font-weight: 400;
 	color: #fff !important;
 	letter-spacing: 0.8px;
-	padding: 0 25px;
+	padding: 0 10px;
 	font-size: 18px;
 	opacity: 0.75;
 }
@@ -249,7 +249,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
-
+.lang-btns {
+	display: flex;
+}
+.lang-btns button {
+	background: linear-gradient(
+		90.21deg,
+		rgba(170, 54, 124, 0.5) -5.91%,
+		rgba(74, 47, 189, 0.5) 111.58%
+	);
+	padding: 10px 15px;
+	color: white;
+	margin: 5px;
+	text-transform: uppercase;
+}
 /************ Banner Css ************/
 .banner {
 	margin-top: 0;

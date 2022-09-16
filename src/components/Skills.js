@@ -6,6 +6,7 @@ import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png";
+import { useTranslation } from "react-i18next";
 
 export default function Skills() {
 	const responsive = {
@@ -28,17 +29,16 @@ export default function Skills() {
 		},
 	};
 
+	const { t } = useTranslation();
+
 	return (
 		<section className="skill" id="skill">
 			<Container>
 				<Row>
 					<Col>
 						<div className="skill-bx">
-							<h2>Skills</h2>
-							<p>
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
-								delectus! Nisi, eveniet a non magnam cum, libero cumque,
-							</p>
+							<h2>{t("skills")}</h2>
+							<p>{t("skills_desc")}</p>
 						</div>
 						<Carousel
 							responsive={responsive}
