@@ -86,11 +86,17 @@ select:focus {
 }
 
 p.success {
-	color: green;
+	color: #91ec91;
+	font-size: 20px;
+	border-left: 5px solid #91ec91;
+	padding-left: 20px;
 }
 
 p.danger {
-	color: red;
+	color: #7e1010;
+	font-size: 20px;
+	border-left: 5px solid #7e1010;
+	padding-left: 20px;
 }
 /************ Navbar Css ************/
 nav.navbar {
