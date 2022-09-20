@@ -72,7 +72,7 @@ export default function Contact() {
 		setButtonText("Sending...");
 
 		const messageId = new Date().getTime();
-		console.log({ ...formValues }, messageId);
+		// console.log({ ...formValues }, messageId);
 		sendMessages(
 			messageId,
 			formValues.firstName,
