@@ -52,18 +52,18 @@ export default function NavBar() {
 							{t("home")}
 						</Nav.Link>
 						<Nav.Link
-							href="#skills"
+							href="#skill"
 							className={
-								activeLink === "skills" ? "active navbar-link" : "navbar-link"
+								activeLink === "skill" ? "active navbar-link" : "navbar-link"
 							}
 							onClick={() => onUpdateActiveLink("skills")}
 						>
 							{t("skills")}
 						</Nav.Link>
 						<Nav.Link
-							href="#projects"
+							href="#project"
 							className={
-								activeLink === "projects" ? "active navbar-link" : "navbar-link"
+								activeLink === "project" ? "active navbar-link" : "navbar-link"
 							}
 							onClick={() => onUpdateActiveLink("projects")}
 						>
@@ -86,9 +86,9 @@ export default function NavBar() {
 								<img src={navIcon3} alt="" />
 							</a>
 						</div>
-						<button className="vvd" onClick={() => console.log("connect")}>
+						<a href="#contact" className="button">
 							<span>{t("lets_connect")}</span>
-						</button>
+						</a>
 					</span>
 				</Navbar.Collapse>
 			</Container>

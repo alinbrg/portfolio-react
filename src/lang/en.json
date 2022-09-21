@@ -7,5 +7,13 @@
 	"about_me": "lorem ipsum Lorem ipsum dolor sit am lorem ipsum Lorem ipsum dolor sit am",
 	"skills_desc": "lorem ipsum Lorem ipsum dolor sit am lorem ipsum Lorem ipsum dolor sit am",
 	"projects_desc": "lorem ipsum Lorem ipsum dolor sit am lorem ipsum Lorem ipsum dolor sit am",
-	"get_in_touch": "Get In Touch"
+	"get_in_touch": "Get In Touch",
+	"name": "Name",
+	"surname": "Last Name",
+	"email": "Email",
+	"phone": "Phone",
+	"message": "Message",
+	"send": "Send",
+	"sent_success": "Message saved successfully",
+	"sent_error": "Please try again"
 }

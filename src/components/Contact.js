@@ -33,7 +33,7 @@ export default function Contact() {
 		message: "",
 	};
 	const [formValues, setformValues] = useState(formInitialValues);
-	const [buttonText, setButtonText] = useState("Send");
+
 	const [status, setStatus] = useState({});
 
 	function onFormUpdate(field, value) {
@@ -42,6 +42,9 @@ export default function Contact() {
 			[field]: value,
 		});
 	}
+
+	const successMessage = t("sent_success");
+	const errorMessage = t("sent_error");
 
 	function sendMessages(messageId, firstName, lastName, email, phone, message) {
 		set(ref(db, "messages/" + messageId), {
@@ -55,21 +58,22 @@ export default function Contact() {
 				// Data saved successfully!
 				setStatus({
 					success: true,
-					message: "Message saved successfully! ",
+					message: successMessage,
 				});
 			})
 			.catch((error) => {
 				// The write failed...
 				setStatus({
 					success: false,
-					message: "Please try again",
+					message: errorMessage,
 				});
 			});
 	}
 
+	console.log(successMessage, errorMessage, status.message);
+
 	function handleSubmit(e) {
 		e.preventDefault();
-		setButtonText("Sending...");
 
 		const messageId = new Date().getTime();
 		// console.log({ ...formValues }, messageId);
@@ -83,7 +87,6 @@ export default function Contact() {
 		);
 
 		setformValues(formInitialValues);
-		setButtonText("Send");
 	}
 
 	return (
@@ -101,7 +104,7 @@ export default function Contact() {
 									<input
 										type="text"
 										value={formValues.firstName}
-										placeholder="First Name"
+										placeholder={t("name")}
 										onChange={(e) => onFormUpdate("firstName", e.target.value)}
 										required
 									/>
@@ -110,7 +113,7 @@ export default function Contact() {
 									<input
 										type="text"
 										value={formValues.lastName}
-										placeholder="Last Name"
+										placeholder={t("surname")}
 										onChange={(e) => onFormUpdate("lastName", e.target.value)}
 										required
 									/>
@@ -119,7 +122,7 @@ export default function Contact() {
 									<input
 										type="email"
 										value={formValues.email}
-										placeholder="Email"
+										placeholder={t("email")}
 										onChange={(e) => onFormUpdate("email", e.target.value)}
 										required
 									/>
@@ -128,7 +131,7 @@ export default function Contact() {
 									<input
 										type="tel"
 										value={formValues.phone}
-										placeholder="Phone"
+										placeholder={t("phone")}
 										onChange={(e) => onFormUpdate("phone", e.target.value)}
 										required
 									/>
@@ -137,11 +140,11 @@ export default function Contact() {
 									<textarea
 										row="6"
 										value={formValues.message}
-										placeholder="Message"
+										placeholder={t("message")}
 										onChange={(e) => onFormUpdate("message", e.target.value)}
 									/>
 									<button type="submit">
-										<span>{buttonText}</span>
+										<span>{t("send")}</span>
 									</button>
 								</Col>
 								{status.message && (
